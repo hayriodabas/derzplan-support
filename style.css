@@ -1,1 +1,32 @@
-:root{color-scheme:light dark;--paper:#f6f6f0;--surface:#fffdf8;--ink:#173247;--line:#c8d7da;--blue:#20536b}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}a{color:var(--blue);text-underline-offset:4px}header,main,footer{max-width:1040px;margin:auto;padding:24px}header{display:flex;gap:24px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:800;letter-spacing:.15em;text-decoration:none}nav{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}h1{font-size:clamp(36px,6vw,66px);line-height:1.05;letter-spacing:-.045em;margin:20px 0}h2{font-size:25px;line-height:1.25;margin:32px 0 10px}p{max-width:740px}.eyebrow{font:12px/1.5 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}.hero{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding:40px 0}.hero img{width:100%;height:auto;border-radius:24px}.button{display:inline-block;background:var(--blue);color:white;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600}.scope{padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:16px}details{border-bottom:1px solid var(--line);padding:20px 0;max-width:800px}summary{font-weight:700;cursor:pointer}footer{font-size:13px;border-top:1px solid var(--line);margin-top:48px}li{margin-bottom:8px}a:focus-visible,summary:focus-visible{outline:3px solid #2865de;outline-offset:6px}@media(max-width:680px){header{display:block}nav{margin-top:16px}.hero{grid-template-columns:1fr;gap:12px;padding-top:22px}.hero img{max-height:240px;object-fit:contain}}@media(prefers-color-scheme:dark){:root{--paper:#112029;--surface:#172c37;--ink:#e1eaf0;--blue:#9fcbd7;--line:#345362}.button{color:#10252e}}
+:root{color-scheme:light dark;--ground:#DAD7D0;--surface:#EEECE6;--ink:#17191A;--ink2:#4B4E4D;--accent:#07733F;--accent-ink:#fff;--cut:#D4470C;--line:#B9B6AE}
+@media(prefers-color-scheme:dark){:root{--ground:#131515;--surface:#1D2020;--ink:#EDECE7;--ink2:#A5A9A6;--accent:#3FE08A;--accent-ink:#0B1A12;--line:#343938}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif}
+a{color:var(--accent);text-underline-offset:4px}
+header,main,footer{max-width:1040px;margin:auto;padding:24px 20px}
+header{display:flex;gap:20px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;letter-spacing:.16em;text-decoration:none;color:var(--ink)}
+.brand::before{content:"";width:10px;height:10px;background:var(--cut);display:inline-block}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
+nav a{color:var(--ink2);text-decoration:none;padding:4px 0}
+nav a:hover{color:var(--accent);text-decoration:underline}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.06;letter-spacing:-.035em;margin:12px 0 16px}
+h2{font-size:24px;line-height:1.25;letter-spacing:-.01em;margin:36px 0 10px}
+p{max-width:700px}
+.eyebrow{font-size:12px;font-weight:600;line-height:1.5;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin:0}
+.eyebrow::before{content:"";display:inline-block;width:8px;height:8px;background:var(--cut);margin-right:8px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:36px 0 12px}
+.hero img{width:100%;height:auto;max-height:620px;object-fit:contain;object-position:top;border-radius:20px;border:1px solid var(--line)}
+.button{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600}
+.button:hover{filter:brightness(1.08)}
+.panel{padding:8px 24px 20px;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-top:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+.grid .panel{margin-top:0}
+.grid h2{font-size:19px;margin-top:16px}
+details{border-bottom:1px solid var(--line);padding:18px 0;max-width:800px}
+summary{font-weight:600;cursor:pointer}
+details p{margin:10px 0 0}
+li{margin-bottom:8px}
+footer{font-size:13px;color:var(--ink2);border-top:1px solid var(--line);margin-top:48px}
+a:focus-visible,summary:focus-visible,.button:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:4px}
+@media(max-width:680px){header{display:block}nav{margin-top:14px}.hero{grid-template-columns:1fr;gap:24px;padding-top:22px}.hero img{max-height:480px}}
